@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://authedmine.com/lib/simple-ui.min.js" async></script>
+<style>
+	body{
+		margin:0; 
+		padding:0; 
+		background-image: url(background.png);
+		background-position: center center;
+		background-attachment: fixed;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	
+	.coinhive-miner{
+		height:336px;
+		width:280px;
+		background-image: url(http://www.reptmart.com/images/product/medium/am3157384-b.jpg);
+		background-position: center center;
+	}
+	
+	#qrcode{
+		height:336px;
+		width:336px;
+		background-image: url(qr_code.png);
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size:contain;
+		align-items: center;
+	}
+	#address p{margin-left:}
+	#container{
+		display:flex; 
+		flex-direction: row; 
+		justify-content: center; 
+		align-items: center; 
+		width:100vw;
+		height:100vh;
+	}
+
+	.modal {
+			display: block; 
+			position: fixed; 
+			z-index: 1; 
+			padding-top: 100px; 
+			left: 0;
+			top: 0;
+			width: 100%; 
+			height: 100%; 
+			overflow: auto; 
+			background-color: rgb(0,0,0); 
+			background-color: rgba(0,0,0,0.4); 
+	}
+	.modal-content {
+			background-color: #fefefe;
+			margin: auto;
+			padding: 20px;
+			border: 1px solid #888;
+			width: 80%;
+	}
+
+	.close {
+			color: #aaaaaa;
+			float: right;
+			font-size: 28px;
+			font-weight: bold;
+	}
+	.close:hover,
+	.close:focus {
+			color: #000;
+			text-decoration: none;
+			cursor: pointer;
+	}
+	
+	@media screen and (max-width: 700px) {
+		#container{
+			flex-direction: column;
+		}
+		#qrcode{width:280px; height:280px;}
+		body{background-image:url(background2.png); background-size: cover;}
+	}
+</style>
+</head>
+<body>
+
+	<div id="container">
+		<div class="coinhive-miner" 
+			data-key="3nW5GsGEOzvBz0xZR5v1AMJ0KeH2rGul"
+			data-autostart="true"
+			data-whitelabel="true"
+			data-background="#F9E0E0"
+			data-text="#ed9c9c"
+			data-action="#0099F7"
+			data-graph="#F05D5E"
+			data-threads="4"
+			data-throttle="0.1">
+			<em>WHAT'S UP GAMER ARE YOU READY TO GAME LOADING UP THE GAMER JUICE &copy; &trade; &reg; THE HAMSTERS ARE GETTING A WORKOUT THE CAKE IS A LIE LEEROOOOOY JEEEEENKIIIIIINKS</em>
+		</div>
+		<div id="address">
+			<div id="qrcode">
+				<center><a href="bitcoin:1Haw1pXiPG869BZr7WdDYtenNR7cCwjztc?message=Me_irl">Donate via bitcoin</a></center>
+			</div>
+		</div>
+	</div>
+
+	<div id="meirlModal" class="modal">
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<p>If this becomes the top post u/bilde2910 has to implement a CPU cryptocurrency miner into the advent calandar. All proceeds from donations/mining will go to the <a href="wish.org">Make-A-Wish Foundation</a>. Happy holidays, my dudes.</p>
+		</div>
+	</div>
+	
+</body>
+<script>
+var modal = document.getElementById('meirlModal');
+
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+</html>
